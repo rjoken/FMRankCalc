@@ -7,8 +7,26 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>430</height>
+    <height>460</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>460</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>460</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>FMRankCalc</string>
@@ -23,13 +41,13 @@
       <x>0</x>
       <y>0</y>
       <width>401</width>
-      <height>431</height>
+      <height>461</height>
      </rect>
     </property>
     <property name="currentIndex">
      <number>0</number>
     </property>
-    <widget class="QWidget" name="tab">
+    <widget class="QWidget" name="tab_main">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -179,194 +197,34 @@
        <property name="verticalSpacing">
         <number>6</number>
        </property>
-       <item row="2" column="2">
-        <widget class="QCheckBox" name="check_keepFacedowns">
+       <item row="1" column="0">
+        <widget class="QLabel" name="lbl_effectives">
          <property name="text">
-          <string/>
+          <string>Effective attacks:</string>
          </property>
         </widget>
        </item>
-       <item row="7" column="0">
-        <widget class="QLabel" name="lbl_turns">
-         <property name="text">
-          <string>Turns:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="3">
-        <widget class="QPushButton" name="btn_minusTurns">
-         <property name="text">
-          <string>-</string>
-         </property>
-        </widget>
-       </item>
-       <item row="8" column="0">
-        <widget class="QLabel" name="lbl_defensives">
-         <property name="text">
-          <string>Defensive wins:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="2">
-        <widget class="QCheckBox" name="check_keepTraps">
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="lbl_fusions">
-         <property name="text">
-          <string>Fusions:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="4">
-        <widget class="QPushButton" name="btn_addTurns">
-         <property name="text">
-          <string>+</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLineEdit" name="tbx_facedowns">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="readOnly">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="4">
-        <widget class="QPushButton" name="btn_addFacedowns">
-         <property name="text">
-          <string>+</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="4">
-        <widget class="QPushButton" name="btn_addMagics">
-         <property name="text">
-          <string>+</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="2">
+       <item row="7" column="2">
         <widget class="QCheckBox" name="check_keepCards">
          <property name="text">
           <string/>
          </property>
         </widget>
        </item>
-       <item row="1" column="4">
-        <widget class="QPushButton" name="btn_addCards">
-         <property name="text">
-          <string>+</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="1">
-        <widget class="QLineEdit" name="tbx_turns">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="readOnly">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="4">
-        <widget class="QPushButton" name="btn_addFusions">
-         <property name="text">
-          <string>+</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="0">
-        <widget class="QLabel" name="lbl_equips">
-         <property name="text">
-          <string>Equips used:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="3">
-        <widget class="QPushButton" name="btn_minusFusions">
-         <property name="text">
-          <string>-</string>
-         </property>
-        </widget>
-       </item>
-       <item row="8" column="2">
-        <widget class="QCheckBox" name="check_keepDefensives">
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QLineEdit" name="tbx_equips">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="readOnly">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
+       <item row="7" column="0">
         <widget class="QLabel" name="lbl_cards">
          <property name="text">
           <string>Cards used:</string>
          </property>
         </widget>
        </item>
-       <item row="4" column="2">
-        <widget class="QCheckBox" name="check_keepEquips">
-         <property name="text">
-          <string/>
+       <item row="7" column="1">
+        <widget class="QLineEdit" name="tbx_cards">
+         <property name="enabled">
+          <bool>true</bool>
          </property>
-        </widget>
-       </item>
-       <item row="4" column="4">
-        <widget class="QPushButton" name="btn_addEquips">
-         <property name="text">
-          <string>+</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="2">
-        <widget class="QCheckBox" name="check_keepTurns">
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="0">
-        <widget class="QLabel" name="lbl_magics">
-         <property name="text">
-          <string>Magics activated:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="3">
-        <widget class="QPushButton" name="btn_minusCards">
-         <property name="text">
-          <string>-</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="3">
-        <widget class="QPushButton" name="btn_minusTraps">
-         <property name="text">
-          <string>-</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="2">
-        <widget class="QCheckBox" name="check_keepEffectives">
-         <property name="text">
-          <string/>
+         <property name="readOnly">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -380,51 +238,17 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="3">
-        <widget class="QPushButton" name="btn_minusFacedowns">
-         <property name="text">
-          <string>-</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="lbl_effectives">
-         <property name="text">
-          <string>Effective attacks:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="8" column="4">
-        <widget class="QPushButton" name="btn_addDefensives">
+       <item row="5" column="4">
+        <widget class="QPushButton" name="btn_addTraps">
          <property name="text">
           <string>+</string>
          </property>
         </widget>
        </item>
-       <item row="3" column="3">
-        <widget class="QPushButton" name="btn_minusEffectives">
+       <item row="0" column="0">
+        <widget class="QLabel" name="lbl_fusions">
          <property name="text">
-          <string>-</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="1">
-        <widget class="QLineEdit" name="tbx_traps">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="readOnly">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="tbx_cards">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="readOnly">
-          <bool>true</bool>
+          <string>Fusions:</string>
          </property>
         </widget>
        </item>
@@ -435,35 +259,197 @@
          </property>
         </widget>
        </item>
-       <item row="8" column="3">
-        <widget class="QPushButton" name="btn_minusDefensives">
+       <item row="3" column="0">
+        <widget class="QLabel" name="lbl_magics">
+         <property name="text">
+          <string>Magics activated:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="4">
+        <widget class="QPushButton" name="btn_addCards">
+         <property name="text">
+          <string>+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="3">
+        <widget class="QPushButton" name="btn_minusTraps">
          <property name="text">
           <string>-</string>
          </property>
         </widget>
        </item>
-       <item row="5" column="2">
-        <widget class="QCheckBox" name="check_keepMagics">
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="tbx_equips">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="2">
+        <widget class="QCheckBox" name="check_keepTurns">
          <property name="text">
           <string/>
          </property>
         </widget>
        </item>
-       <item row="5" column="3">
+       <item row="7" column="3">
+        <widget class="QPushButton" name="btn_minusCards">
+         <property name="text">
+          <string>-</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QPushButton" name="btn_minusEffectives">
+         <property name="text">
+          <string>-</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QCheckBox" name="check_keepEquips">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="3">
         <widget class="QPushButton" name="btn_minusMagics">
          <property name="text">
           <string>-</string>
          </property>
         </widget>
        </item>
-       <item row="6" column="0">
-        <widget class="QLabel" name="lbl_traps">
+       <item row="2" column="3">
+        <widget class="QPushButton" name="btn_minusFacedowns">
          <property name="text">
-          <string>Traps activated:</string>
+          <string>-</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QCheckBox" name="check_keepMagics">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QCheckBox" name="check_keepEffectives">
+         <property name="text">
+          <string/>
          </property>
         </widget>
        </item>
        <item row="3" column="1">
+        <widget class="QLineEdit" name="tbx_magics">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="4">
+        <widget class="QPushButton" name="btn_addEquips">
+         <property name="text">
+          <string>+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="4">
+        <widget class="QPushButton" name="btn_addMagics">
+         <property name="text">
+          <string>+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="lbl_equips">
+         <property name="text">
+          <string>Equips used:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="4">
+        <widget class="QPushButton" name="btn_addFacedowns">
+         <property name="text">
+          <string>+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="0">
+        <widget class="QLabel" name="lbl_turns">
+         <property name="text">
+          <string>Turns:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="tbx_facedowns">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="tbx_traps">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="4">
+        <widget class="QPushButton" name="btn_addEffectives">
+         <property name="text">
+          <string>+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <widget class="QCheckBox" name="check_keepTraps">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4">
+        <widget class="QPushButton" name="btn_addFusions">
+         <property name="text">
+          <string>+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="3">
+        <widget class="QPushButton" name="btn_minusTurns">
+         <property name="text">
+          <string>-</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="1">
+        <widget class="QLineEdit" name="tbx_turns">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
         <widget class="QLineEdit" name="tbx_effectives">
          <property name="enabled">
           <bool>true</bool>
@@ -473,8 +459,8 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="2">
-        <widget class="QCheckBox" name="check_keepFusions">
+       <item row="2" column="2">
+        <widget class="QCheckBox" name="check_keepFacedowns">
          <property name="text">
           <string/>
          </property>
@@ -487,7 +473,42 @@
          </property>
         </widget>
        </item>
-       <item row="8" column="1">
+       <item row="5" column="0">
+        <widget class="QLabel" name="lbl_traps">
+         <property name="text">
+          <string>Traps activated:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QCheckBox" name="check_keepFusions">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="4">
+        <widget class="QPushButton" name="btn_addTurns">
+         <property name="text">
+          <string>+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QPushButton" name="btn_minusFusions">
+         <property name="text">
+          <string>-</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="lbl_defensives">
+         <property name="text">
+          <string>Defensive wins:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
         <widget class="QLineEdit" name="tbx_defensives">
          <property name="enabled">
           <bool>true</bool>
@@ -497,27 +518,24 @@
          </property>
         </widget>
        </item>
-       <item row="3" column="4">
-        <widget class="QPushButton" name="btn_addEffectives">
+       <item row="6" column="2">
+        <widget class="QCheckBox" name="check_keepDefensives">
          <property name="text">
-          <string>+</string>
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="3">
+        <widget class="QPushButton" name="btn_minusDefensives">
+         <property name="text">
+          <string>-</string>
          </property>
         </widget>
        </item>
        <item row="6" column="4">
-        <widget class="QPushButton" name="btn_addTraps">
+        <widget class="QPushButton" name="btn_addDefensives">
          <property name="text">
           <string>+</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="1">
-        <widget class="QLineEdit" name="tbx_magics">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="readOnly">
-          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -562,10 +580,111 @@
        </item>
       </layout>
      </widget>
+     <widget class="QLabel" name="lbl_starchips">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>410</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Starchips: 00</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_add1Starchip">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>410</y>
+        <width>31</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_add2Starchip">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>410</y>
+        <width>31</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_add3Starchip">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>410</y>
+        <width>31</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_add4Starchip">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>410</y>
+        <width>31</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_add5Starchip">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>410</y>
+        <width>31</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="tbx_removeStarchips">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>410</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_removeStarchips">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>410</y>
+        <width>101</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Remove Amount</string>
+      </property>
+     </widget>
     </widget>
-    <widget class="QWidget" name="tab_2">
+    <widget class="QWidget" name="tab_settings">
      <attribute name="title">
-      <string>Keybinds</string>
+      <string>Settings</string>
      </attribute>
      <widget class="QWidget" name="gridLayoutWidget_3">
       <property name="geometry">
@@ -573,47 +692,42 @@
         <x>0</x>
         <y>0</y>
         <width>191</width>
-        <height>361</height>
+        <height>381</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_4">
-       <item row="6" column="1">
-        <widget class="QLineEdit" name="lineEdit_7"/>
-       </item>
-       <item row="5" column="1">
-        <widget class="QLineEdit" name="lineEdit_6"/>
-       </item>
-       <item row="3" column="1">
-        <widget class="QLineEdit" name="lineEdit_4"/>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLineEdit" name="lineEdit_3"/>
-       </item>
-       <item row="9" column="0">
-        <widget class="QLabel" name="lbl_resetKeybind">
+       <item row="8" column="0">
+        <widget class="QLabel" name="lbl_addTurns">
          <property name="text">
-          <string>Reset</string>
+          <string>Turns +</string>
          </property>
         </widget>
        </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="lbl_addEffectives">
+       <item row="10" column="1">
+        <widget class="QPushButton" name="btn_add1StarchipHotkey">
          <property name="text">
-          <string>Effectives +</string>
+          <string>PushButton</string>
          </property>
         </widget>
        </item>
-       <item row="7" column="0">
-        <widget class="QLabel" name="lbl_addCardsUsed">
+       <item row="7" column="1">
+        <widget class="QPushButton" name="btn_addCardsHotkey">
          <property name="text">
-          <string>Cards Used +</string>
+          <string>PushButton</string>
          </property>
         </widget>
        </item>
-       <item row="6" column="0">
-        <widget class="QLabel" name="lbl_addDefWins">
+       <item row="11" column="0">
+        <widget class="QLabel" name="lbl_add2Starchip">
          <property name="text">
-          <string>Defensive Wins +</string>
+          <string>Add 2 Starchips</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="lbl_addFacedowns">
+         <property name="text">
+          <string>Facedowns +</string>
          </property>
         </widget>
        </item>
@@ -624,13 +738,6 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="lbl_addFusions">
-         <property name="text">
-          <string>Fusions +</string>
-         </property>
-        </widget>
-       </item>
        <item row="4" column="0">
         <widget class="QLabel" name="lbl_addEquips">
          <property name="text">
@@ -638,8 +745,54 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="lineEdit_2"/>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="btn_addFacedownsHotkey">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="lbl_addFusions">
+         <property name="text">
+          <string>Fusions +</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="0">
+        <widget class="QLabel" name="lbl_add1Starchip">
+         <property name="text">
+          <string>Add 1 Starchip</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QPushButton" name="btn_addTrapsHotkey">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="lbl_addDefWins">
+         <property name="text">
+          <string>Defensive Wins +</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="btn_addMagicsHotkey">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="lbl_addEffectives">
+         <property name="text">
+          <string>Effectives +</string>
+         </property>
+        </widget>
        </item>
        <item row="3" column="0">
         <widget class="QLabel" name="lbl_addMagics">
@@ -648,34 +801,68 @@
          </property>
         </widget>
        </item>
-       <item row="8" column="1">
-        <widget class="QLineEdit" name="lineEdit_9"/>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEdit"/>
-       </item>
-       <item row="7" column="1">
-        <widget class="QLineEdit" name="lineEdit_8"/>
-       </item>
-       <item row="4" column="1">
-        <widget class="QLineEdit" name="lineEdit_5"/>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="lbl_addFacedowns">
+       <item row="9" column="0">
+        <widget class="QLabel" name="lbl_resetKeybind">
          <property name="text">
-          <string>Facedowns +</string>
+          <string>Reset</string>
          </property>
         </widget>
        </item>
-       <item row="8" column="0">
-        <widget class="QLabel" name="lbl_addTurns">
+       <item row="1" column="1">
+        <widget class="QPushButton" name="btn_addEffectivesHotkey">
          <property name="text">
-          <string>Turns +</string>
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QPushButton" name="btn_addEquipsHotkey">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="btn_addFusionsHotkey">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QPushButton" name="btn_addDefensivesHotkey">
+         <property name="text">
+          <string>PushButton</string>
          </property>
         </widget>
        </item>
        <item row="9" column="1">
-        <widget class="QLineEdit" name="lineEdit_10"/>
+        <widget class="QPushButton" name="btn_resetHotkey">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QPushButton" name="btn_addTurnsHotkey">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="lbl_addCardsUsed">
+         <property name="text">
+          <string>Cards Used +</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="1">
+        <widget class="QPushButton" name="btn_add2StarchipHotkey">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -685,113 +872,233 @@
         <x>200</x>
         <y>0</y>
         <width>191</width>
-        <height>321</height>
+        <height>381</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_5">
-       <item row="4" column="1">
-        <widget class="QLineEdit" name="lineEdit_19"/>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="lbl_addFusionKeybind_2">
-         <property name="text">
-          <string>Fusions -</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="0">
-        <widget class="QLabel" name="label_15">
-         <property name="text">
-          <string>Equips -</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="1">
-        <widget class="QLineEdit" name="lineEdit_11"/>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEdit_17"/>
-       </item>
-       <item row="7" column="0">
-        <widget class="QLabel" name="label_12">
-         <property name="text">
-          <string>Cards Used -</string>
-         </property>
-        </widget>
-       </item>
-       <item row="8" column="0">
-        <widget class="QLabel" name="label_18">
-         <property name="text">
-          <string>Turns -</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="1">
-        <widget class="QLineEdit" name="lineEdit_18"/>
-       </item>
-       <item row="8" column="1">
-        <widget class="QLineEdit" name="lineEdit_16"/>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_17">
-         <property name="text">
-          <string>Facedowns -</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_11">
-         <property name="text">
-          <string>Effectives -</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QLineEdit" name="lineEdit_13"/>
-       </item>
-       <item row="5" column="0">
-        <widget class="QLabel" name="label_14">
-         <property name="text">
-          <string>Traps -</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="1">
-        <widget class="QLineEdit" name="lineEdit_12"/>
-       </item>
        <item row="6" column="0">
-        <widget class="QLabel" name="label_13">
+        <widget class="QLabel" name="lbl_minusDefensives">
          <property name="text">
           <string>Defensive Wins -</string>
          </property>
         </widget>
        </item>
-       <item row="2" column="1">
-        <widget class="QLineEdit" name="lineEdit_14"/>
+       <item row="2" column="0">
+        <widget class="QLabel" name="lbl_minusFacedowns">
+         <property name="text">
+          <string>Facedowns -</string>
+         </property>
+        </widget>
        </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="lineEdit_15"/>
+       <item row="9" column="0">
+        <widget class="QLabel" name="lbl_add3Starchip">
+         <property name="text">
+          <string>Add 3 Starchips</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="lbl_minusEffectives">
+         <property name="text">
+          <string>Effectives -</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="lbl_minusTraps">
+         <property name="text">
+          <string>Traps -</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="0">
+        <widget class="QLabel" name="lbl_add5Starchip">
+         <property name="text">
+          <string>Add 5 Starchips</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="lbl_minusEquips">
+         <property name="text">
+          <string>Equips -</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="lbl_minusTurns">
+         <property name="text">
+          <string>Turns -</string>
+         </property>
+        </widget>
        </item>
        <item row="3" column="0">
-        <widget class="QLabel" name="label_16">
+        <widget class="QLabel" name="lbl_minusMagics">
          <property name="text">
           <string>Magics -</string>
          </property>
         </widget>
        </item>
+       <item row="10" column="0">
+        <widget class="QLabel" name="lbl_add4Starchip">
+         <property name="text">
+          <string>Add 4 Starchips</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="lbl_minusCards">
+         <property name="text">
+          <string>Cards Used -</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="lbl_minusFusions">
+         <property name="text">
+          <string>Fusions -</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="btn_minusFusionsHotkey">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="btn_minusEffectivesHotkey">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="btn_minusFacedownsHotkey">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="btn_minusMagicsHotkey">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QPushButton" name="btn_minusEquipsHotkey">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QPushButton" name="btn_minusTrapsHotkey">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QPushButton" name="btn_minusDefensivesHotkey">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QPushButton" name="btn_minusCardsHotkey">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QPushButton" name="btn_minusTurnsHotkey">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QPushButton" name="btn_add3StarchipHotkey">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="1">
+        <widget class="QPushButton" name="btn_add4StarchipHotkey">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="1">
+        <widget class="QPushButton" name="btn_add5StarchipHotkey">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="btn_saveKeybinds">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>330</y>
-        <width>191</width>
-        <height>31</height>
+        <x>220</x>
+        <y>410</y>
+        <width>161</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="text">
        <string>Save Keybinds</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="check_alwaysOnTop">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>410</y>
+        <width>101</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Always on Top</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="check_globalHotkeys">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>410</y>
+        <width>101</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>(Windows only)</string>
+      </property>
+      <property name="text">
+       <string>Global Hotkeys</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_hotkeyInfo">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>380</y>
+        <width>371</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>*Press escape to cancel setting a keybind.</string>
       </property>
      </widget>
     </widget>
