@@ -1,4 +1,5 @@
 <RCC>
-    <qresource prefix="FMRankCalc">
+    <qresource prefix="/FMRankCalc">
+        <file>widespread.ico</file>
     </qresource>
 </RCC>

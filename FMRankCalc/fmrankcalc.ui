@@ -29,7 +29,11 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>FMRankCalc</string>
+   <string>FM Rank Calculator - by hippochan</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="fmrankcalc.qrc">
+    <normaloff>:/FMRankCalc/widespread.ico</normaloff>:/FMRankCalc/widespread.ico</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QTabWidget" name="tabWidget">

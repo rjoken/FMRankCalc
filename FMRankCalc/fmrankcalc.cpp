@@ -1,5 +1,7 @@
 #include "fmrankcalc.h"
-#include "windows.h"
+#ifdef _WIN32
+    #include <Windows.h>
+#endif
 #include <iostream>
 #include <QSettings>
 #include <QKeyEvent>
@@ -31,6 +33,8 @@ void FMRankCalc::Initialise()
         DefaultKeybinds();
     }
     UpdateTextboxes();
+
+    //Lots of UI element event connections
     connect(ui.btn_addFusions, &QPushButton::released, this, &FMRankCalc::btn_addFusions_Clicked);
     connect(ui.btn_minusFusions, &QPushButton::released, this, &FMRankCalc::btn_minusFusions_Clicked);
     connect(ui.btn_addCards, &QPushButton::released, this, &FMRankCalc::btn_addCards_Clicked);
@@ -60,7 +64,9 @@ void FMRankCalc::Initialise()
     connect(ui.btn_add4Starchip, &QPushButton::released, this, &FMRankCalc::btn_add4Starchip_Clicked);
     connect(ui.btn_add5Starchip, &QPushButton::released, this, &FMRankCalc::btn_add5Starchip_Clicked);
     connect(ui.btn_removeStarchips, &QPushButton::released, this, &FMRankCalc::btn_removeStarchips_Clicked);
+    connect(ui.tbx_removeStarchips, &QLineEdit::returnPressed, this, &FMRankCalc::tbx_removeStarchips_ReturnPressed);
 
+    //Button connections for settings screen
     connect(ui.btn_addFusionsHotkey, &QPushButton::released, this, &FMRankCalc::btn_addFusionsHotkey_Clicked);
     connect(ui.btn_addEffectivesHotkey, &QPushButton::released, this, &FMRankCalc::btn_addEffectivesHotkey_Clicked);
     connect(ui.btn_addFacedownsHotkey, &QPushButton::released, this, &FMRankCalc::btn_addFacedownsHotkey_Clicked);
@@ -85,10 +91,11 @@ void FMRankCalc::Initialise()
     connect(ui.btn_add4StarchipHotkey, &QPushButton::released, this, &FMRankCalc::btn_add4StarchipHotkey_Clicked);
     connect(ui.btn_add5StarchipHotkey, &QPushButton::released, this, &FMRankCalc::btn_add5StarchipHotkey_Clicked);
     connect(ui.btn_resetHotkey, &QPushButton::released, this, &FMRankCalc::btn_resetHotkey_Clicked);
-
     connect(ui.btn_saveKeybinds, &QPushButton::released, this, &FMRankCalc::btn_saveKeybinds_Clicked);
 }
 
+#ifdef _WIN32
+//Native event handler for global hotkeys
 bool FMRankCalc::nativeEvent(const QByteArray& eventType, void* message, qintptr* result)
 {
     Q_UNUSED(eventType);
@@ -432,14 +439,17 @@ void FMRankCalc::check_globalHotkeys_Changed()
         UnregisterGlobalHotkeys();
     }
 }
+#endif
 
 void FMRankCalc::keyPressEvent(QKeyEvent* e)
 {
     if (e->key() == Qt::Key_Escape)
     {
+        //Cancel setting hotkey. Also just generally refreshes textboxes. No one needs to know :)
         UpdateTextboxes();
         return;
     }
+    //This is a messy way of doing things
     if (ui.btn_addFusionsHotkey->hasFocus())
     {
         addFusionsKeybind = Qt::Key(e->key());
@@ -863,6 +873,7 @@ void FMRankCalc::btn_saveKeybinds_Clicked()
     WriteSettings();
 }
 
+//ON WINDOWS THIS STUFF IS STORED IN AppData/Roaming
 void FMRankCalc::WriteSettings() 
 {
     QSettings settings(QSettings::IniFormat, QSettings::UserScope, "hippochan", "FMRankCalc");
@@ -975,6 +986,8 @@ void FMRankCalc::UpdateTextboxes()
     ui.btn_add4StarchipHotkey->setText(QKeySequence(add4Keybind).toString());
     ui.btn_add5StarchipHotkey->setText(QKeySequence(add5Keybind).toString());
     ui.btn_resetHotkey->setText(QKeySequence(resetKeybind).toString());
+
+    ui.centralWidget->setFocus();
 }
 
 void FMRankCalc::btn_atecMode_Clicked()
@@ -1174,6 +1187,13 @@ void FMRankCalc::btn_add5Starchip_Clicked()
     UpdateTextboxes();
 }
 
+void FMRankCalc::tbx_removeStarchips_ReturnPressed()
+{
+    btn_removeStarchips_Clicked();
+    ui.tbx_removeStarchips->clear();
+    UpdateTextboxes();
+}
+
 void FMRankCalc::btn_removeStarchips_Clicked()
 {
     int chipsToRemove = ui.tbx_removeStarchips->text().toInt();
@@ -1289,6 +1309,8 @@ int FMRankCalc::UpdateLPPoints(int lp)
             return -5;
         case 4:
             return -7;
+        default:
+            return 6;
     }
     
 }

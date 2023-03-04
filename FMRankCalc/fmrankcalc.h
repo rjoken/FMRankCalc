@@ -45,6 +45,7 @@ public:
     void btn_add4Starchip_Clicked();
     void btn_add5Starchip_Clicked();
     void btn_removeStarchips_Clicked();
+    void tbx_removeStarchips_ReturnPressed();
     int UpdateTurnPoints(int turns);
     int UpdateEffectivePoints(int effectives);
     int UpdateDefensivePoints(int defensives);
@@ -93,6 +94,7 @@ public:
 
 private:
     Ui::FMRankCalcClass ui;
+
     int turnPoints;
     int effectivePoints;
     int defensivePoints;
@@ -143,5 +145,4 @@ private:
     Qt::Key add4Keybind;
     Qt::Key add5Keybind;
     bool nativeEvent(const QByteArray& eventType, void* message, qintptr* result);
-
 };
